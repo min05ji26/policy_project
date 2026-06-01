@@ -1,0 +1,83 @@
+.signup-wrap { min-height: 100vh; background: #F1F5F9; }
+
+.signup-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  min-height: calc(100vh - 52px);
+}
+
+.signup-card {
+  background: #fff;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.signup-header { text-align: center; margin-bottom: 28px; }
+.signup-title { font-size: 22px; font-weight: 700; color: #0F172A; margin-bottom: 6px; }
+.signup-sub { font-size: 13px; color: #64748B; }
+
+.signup-form { display: flex; flex-direction: column; gap: 14px; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field label { font-size: 12px; font-weight: 600; color: #475569; }
+.field input {
+  font-size: 13px;
+  padding: 10px 12px;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  background: #F8FAFC;
+  color: #0F172A;
+  outline: none;
+}
+.field input:focus { border-color: #93C5FD; background: #fff; }
+
+.error-msg { font-size: 12px; color: #DC2626; margin-top: -6px; }
+
+.signup-submit {
+  width: 100%;
+  padding: 12px;
+  background: #0F2A4A;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 4px;
+}
+.signup-submit:hover { background: #1A3F6F; }
+
+.signup-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #64748B;
+}
+.go-login {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2563EB;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.go-login:hover { text-decoration: underline; }
+
+.done-icon {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: #DBEAFE;
+  color: #2563EB;
+  font-size: 24px;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 16px;
+}
+.done-title { font-size: 22px; font-weight: 700; color: #0F172A; text-align: center; margin-bottom: 8px; }
+.done-sub { font-size: 13px; color: #64748B; text-align: center; margin-bottom: 24px; }

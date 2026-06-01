@@ -13,12 +13,12 @@ const POLICIES = [
 
 const TABS = ["전체","청년","주거","취업지원","저소득"];
 
-export default function HomePage({ onStart }) {
+export default function HomePage({ onStart, onLogin, isLoggedIn }) {
   const [tab, setTab] = useState("전체");
 
   return (
     <div className="home-wrap">
-      <Navbar />
+      <Navbar isLoggedIn={isLoggedIn} onLogin={onLogin} />
       <div className="hero">
         <div className="hero-eyebrow">AI 정책 추천 서비스</div>
         <h1 className="hero-title">
