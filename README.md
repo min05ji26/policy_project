@@ -1,16 +1,109 @@
-# React + Vite
+# 정책포털 — AI 정책 추천 서비스 (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+사용자의 개인 조건을 AI 챗봇과의 대화로 수집하고, 수혜 가능성이 높은 정부 정책을 추천해주는 웹 서비스의 프론트엔드입니다.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 프로젝트 목표
 
-## React Compiler
+- 복잡한 정책 자격 조건을 사용자가 직접 계산하지 않아도 되도록, AI와의 자연어 대화로 조건을 수집
+- 수집된 조건을 백엔드 ML 모델에 전달해 정책별 수혜 가능성(%)을 도출
+- 로그인 없이 누구나 즉시 이용 가능한 진입 장벽 낮은 UX 추구
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 화면 구성
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. 홈페이지 (`Homepage`)
+- 서비스 소개 및 정책 목록을 보여주는 랜딩 페이지
+- 상단 히어로 섹션: 서비스 설명 + "AI 챗봇으로 시작하기" CTA 버튼
+- 하단 정책 그리드: 대출·임대·분양·급여 등 카테고리별 정책 카드 목록
+- 탭 필터(전체 / 청년 / 주거 / 취업지원 / 저소득)
+
+### 2. 챗봇 페이지 (`ChatPage`)
+- AI와 대화하며 9개 필수 항목(나이, 가구원수, 혼인, 거주형태, 무주택, 소득, 자산, 취업, 부채)을 수집
+- 왼쪽: 채팅 인터페이스 (대화창 + 입력창)
+- 오른쪽: 사이드바 — 현재까지 수집된 정보를 칩(chip) 형태로 실시간 표시
+- 상단 5단계 진행 바로 수집 현황 시각화
+- 모든 항목 수집 완료 시 자동으로 백엔드 `/predict` 호출 → 결과 페이지로 이동
+
+### 3. 결과 페이지 (`ResultPage`)
+- 전체 수혜 가능성(%) 및 정책별 확률을 내림차순으로 표시
+- 자격이 있음에도 미수혜 중인 역설 케이스 강조 표시
+- 각 정책 카드에 신청 사이트 바로가기 링크 포함
+- 로그인 후 결과 저장 기능 유도 배너
+
+---
+
+## 화면 전환 흐름
+
+```
+홈페이지
+  │
+  │  "AI 챗봇으로 시작하기" 버튼 클릭
+  ▼
+챗봇 페이지
+  │
+  │  9개 항목 수집 완료 → /predict 응답 수신
+  ▼
+결과 페이지
+  │
+  │  "다시 분석" 버튼 클릭
+  ▼
+홈페이지
+```
+
+- **어느 페이지에서든** 상단 네비게이션 바의 "정책포털" 로고를 클릭하면 홈으로 이동
+- 챗봇 페이지에서 로고 클릭 시, 진행 중인 대화 내용이 있으면 **"저장되지 않습니다. 홈으로 이동하시겠습니까?"** 확인 다이얼로그 표시
+
+---
+
+## 기술 스택
+
+| 항목 | 내용 |
+|------|------|
+| 프레임워크 | React 19 + Vite |
+| 스타일링 | CSS Modules (컴포넌트별 분리) |
+| 라우팅 | 상태 기반 페이지 전환 (react-router 미사용) |
+| 백엔드 연동 | `fetch` API → `http://localhost:8000` |
+
+---
+
+## 디렉토리 구조
+
+```
+src/
+├── App.jsx                 # 페이지 전환 상태 관리
+├── main.jsx
+├── pages/                  # 페이지 컴포넌트
+│   ├── Homepage.jsx
+│   ├── ChatPage.jsx
+│   ├── ResultPage.jsx
+│   ├── Navbar.jsx
+│   └── Sidebar.jsx
+└── components/             # CSS 파일
+    ├── Homepage.css
+    ├── ChatPage.css
+    ├── ResultPage.css
+    ├── Navbar.css
+    ├── Sidebar.css
+    └── index.css
+```
+
+---
+
+## 백엔드 API 연동
+
+| 엔드포인트 | 메서드 | 역할 |
+|------------|--------|------|
+| `/chat` | POST | 대화 히스토리 전송 → AI 응답 + 수집된 조건 반환 |
+| `/predict` | POST | 수집된 조건 전송 → 정책별 수혜 확률 반환 |
+
+---
+
+## 로컬 실행
+
+```bash
+npm install
+npm run dev
+```
