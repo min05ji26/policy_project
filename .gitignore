@@ -1,0 +1,24 @@
+# 의존성
+node_modules/
+back/venv/
+
+# 환경변수 (절대 커밋 금지)
+.env
+back/.env
+front/.env
+
+# md 파일 (로컬 메모용)
+*.md
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# 빌드 결과물
+dist/
+build/
+
+# 기타
+.DS_Store
+*.db

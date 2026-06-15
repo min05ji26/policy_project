@@ -1,0 +1,81 @@
+{
+  "_comment": "retrain 후 정책별 최적 임계값. 재최적화: train_final 기반",
+  "default": 0.5,
+  "_details": {
+    "공적연금": {
+      "val_auc": 0.7808,
+      "threshold_default": {
+        "recall": 0.7994,
+        "precision": 0.4794,
+        "f1": 0.5994
+      },
+      "threshold_optimal": {
+        "recall": 0.9004,
+        "precision": 0.4537,
+        "f1": 0.6034
+      },
+      "optimized_date": "2026-06-02"
+    },
+    "생계급여": {
+      "val_auc": 0.7501,
+      "threshold_default": {
+        "recall": 0.0046,
+        "precision": 0.0833,
+        "f1": 0.0087
+      },
+      "threshold_optimal": {
+        "recall": 0.5297,
+        "precision": 0.2193,
+        "f1": 0.3102
+      },
+      "optimized_date": "2026-06-02"
+    },
+    "의료급여": {
+      "val_auc": 0.7453,
+      "threshold_default": {
+        "recall": 0.0704,
+        "precision": 0.2113,
+        "f1": 0.1056
+      },
+      "threshold_optimal": {
+        "recall": 0.6009,
+        "precision": 0.1966,
+        "f1": 0.2963
+      },
+      "optimized_date": "2026-06-02"
+    },
+    "주거급여": {
+      "val_auc": 0.7475,
+      "threshold_default": {
+        "recall": 0.2806,
+        "precision": 0.2708,
+        "f1": 0.2756
+      },
+      "threshold_optimal": {
+        "recall": 0.5755,
+        "precision": 0.2512,
+        "f1": 0.3497
+      },
+      "optimized_date": "2026-06-02"
+    },
+    "주거급여임차": {
+      "val_auc": 0.6673,
+      "threshold_default": {
+        "recall": 0.0,
+        "precision": 0.0,
+        "f1": 0.0
+      },
+      "threshold_optimal": {
+        "recall": 0.0833,
+        "precision": 0.125,
+        "f1": 0.1
+      },
+      "optimized_date": "2026-06-02"
+    }
+  },
+  "공적연금": 0.45,
+  "생계급여": 0.35,
+  "의료급여": 0.35,
+  "주거급여": 0.4,
+  "주거급여임차": 0.1
+}

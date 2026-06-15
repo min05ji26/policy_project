@@ -1,0 +1,48 @@
+=== train_long.csv policy_id별 현황 ===
+전체 행수: 153,514
+
+  policy_id                       전체행수      수혜자수     수혜율  source
+  ----------------------------------------------------------------------
+  policy_개보수                     4,495         3    0.1%  주거실태조사
+  policy_고용보험                   12,828       316    2.5%  KOWEPS
+  policy_공공분양                    4,495         0    0.0%  주거실태조사
+  policy_공공임대                    4,495       385    8.6%  주거실태조사
+  policy_공적연금                   12,828     3,566   27.8%  KOWEPS
+  policy_교육급여                   14,915       157    1.1%  KOWEPS
+  policy_구입자금대출                  4,495         0    0.0%  주거실태조사
+  policy_민간분양특별공급                4,495         0    0.0%  주거실태조사
+  policy_산재보험                   12,828        42    0.3%  KOWEPS
+  policy_생계급여                   14,915     1,095    7.3%  KOWEPS
+  policy_월세대출                    4,495        14    0.3%  주거실태조사
+  policy_의료급여                   14,915     1,066    7.1%  KOWEPS
+  policy_자활근로                   14,915        26    0.2%  KOWEPS
+  policy_전세자금대출                  4,495       563   12.5%  주거실태조사
+  policy_주거급여                   14,915     1,390    9.3%  KOWEPS
+  policy_주거급여수선                  4,495         0    0.0%  주거실태조사
+  policy_주거급여임차                  4,495        59    1.3%  주거실태조사
+
+=== koweps_extracted.csv 컬럼 현황 ===
+전체 컬럼수: 21
+정책 컬럼 (8개):
+  policy_생계급여
+  policy_의료급여
+  policy_주거급여
+  policy_교육급여
+  policy_공적연금
+  policy_고용보험
+  policy_산재보험
+  policy_자활근로
+feature 컬럼 (13개):
+  age
+  gender
+  household_size
+  marriage
+  edu
+  job_yn
+  employ_type
+  income_monthly
+  income_annual
+  region
+  hc
+  pension_type
+  health_insurance

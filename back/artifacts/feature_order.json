@@ -1,0 +1,46 @@
+{
+  "feature_cols": [
+    "age",
+    "household_size",
+    "income_monthly",
+    "gender",
+    "marriage",
+    "edu",
+    "job_yn",
+    "employ_type",
+    "pid_policy_공적연금",
+    "pid_policy_생계급여",
+    "pid_policy_의료급여",
+    "pid_policy_주거급여",
+    "pid_policy_주거급여임차"
+  ],
+  "num_cols": [
+    "age",
+    "household_size",
+    "income_monthly"
+  ],
+  "cat_cols": [
+    "gender",
+    "marriage",
+    "edu",
+    "job_yn",
+    "employ_type"
+  ],
+  "ohe_cols": [
+    "pid_policy_공적연금",
+    "pid_policy_생계급여",
+    "pid_policy_의료급여",
+    "pid_policy_주거급여",
+    "pid_policy_주거급여임차"
+  ],
+  "model_type": "LogisticRegression",
+  "ml_policy_ids": [
+    "policy_주거급여임차",
+    "policy_생계급여",
+    "policy_의료급여",
+    "policy_공적연금",
+    "policy_주거급여"
+  ],
+  "roc_auc": 0.8206,
+  "trained_on": "train_final.csv"
+}

@@ -1,0 +1,35 @@
+# 환경변수
+.env
+
+# 원본 데이터 (대용량, git 제외)
+data/raw/
+2024_일반가구_20260318_64280.csv
+
+# 병합 학습 데이터 (83MB, GitHub 권장 한도 초과)
+data/processed/train_final.csv
+
+# 아티팩트: 포함 (모델 파일 KB 수준)
+# artifacts/ 제거 — 모델·스케일러·임계값 파일 포함
+
+# 서버 로그
+server.log
+server_out.log
+server_err.log
+
+# Python 캐시
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# 가상환경
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# macOS
+.DS_Store

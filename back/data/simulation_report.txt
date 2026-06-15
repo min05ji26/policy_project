@@ -1,0 +1,63 @@
+============================================================
+시뮬레이션 데이터 품질 검증
+============================================================
+전체 행수: 240,000
+전체 컬럼수: 51
+
+--- 정책 1: 생계급여 (50,000명) ---
+  수혜자수: 22,374명  수혜율: 44.7%
+  simulation_prob: mean=0.4481  std=0.2525
+  Hard knock-out(부양의무자): 5,090명 (10.2%)
+  Hard knock-out(직장건보): 0.0명 (0.0%)
+  Hard knock-out(미가입): 0  피보험미달: 0  자발이직: 0  기한도과: 0
+  Hard knock-out(가입미달): 0  수급연령미달: 0
+  income_ratio: mean=0.221  p25=0.153  p50=0.220  p75=0.287
+
+--- 정책 2: 의료급여 (40,000명) ---
+  수혜자수: 20,506명  수혜율: 51.3%
+  simulation_prob: mean=0.5123  std=0.2697
+  Hard knock-out(부양의무자): 2,144명 (5.4%)
+  Hard knock-out(직장건보): 2,287.0명 (5.7%)
+  Hard knock-out(미가입): 0  피보험미달: 0  자발이직: 0  기한도과: 0
+  Hard knock-out(가입미달): 0  수급연령미달: 0
+  income_ratio: mean=0.281  p25=0.214  p50=0.281  p75=0.349
+
+--- 정책 3: 주거급여 (50,000명) ---
+  수혜자수: 26,458명  수혜율: 52.9%
+  simulation_prob: mean=0.5281  std=0.2191
+  Hard knock-out(부양의무자): 0명 (0.0%)
+  Hard knock-out(직장건보): 0.0명 (0.0%)
+  Hard knock-out(미가입): 0  피보험미달: 0  자발이직: 0  기한도과: 0
+  Hard knock-out(가입미달): 0  수급연령미달: 0
+  income_ratio: mean=0.251  p25=0.168  p50=0.250  p75=0.330
+
+--- 정책 4: 고용보험 (60,000명) ---
+  수혜자수: 24,193명  수혜율: 40.3%
+  simulation_prob: mean=0.4053  std=0.2658
+  Hard knock-out(부양의무자): 0명 (0.0%)
+  Hard knock-out(직장건보): 0.0명 (0.0%)
+  Hard knock-out(미가입): 3,955  피보험미달: 6,330  자발이직: 3,066  기한도과: 3,610
+  Hard knock-out(가입미달): 0  수급연령미달: 0
+  income_ratio: mean=1.107  p25=0.681  p50=0.985  p75=1.416
+
+--- 정책 5: 국민연금 (40,000명) ---
+  수혜자수: 23,262명  수혜율: 58.2%
+  simulation_prob: mean=0.5790  std=0.3566
+  Hard knock-out(부양의무자): 0명 (0.0%)
+  Hard knock-out(직장건보): 0.0명 (0.0%)
+  Hard knock-out(미가입): 0  피보험미달: 0  자발이직: 0  기한도과: 0
+  Hard knock-out(가입미달): 4,834  수급연령미달: 3,733
+  income_ratio: mean=0.845  p25=0.440  p50=0.742  p75=1.139
+
+--- prob-label 상관관계 (정책별) ---
+  정책1 생계급여: corr=0.5099
+  정책2 의료급여: corr=0.5414
+  정책3 주거급여: corr=0.4403
+  정책4 고용보험: corr=0.5377
+  정책5 국민연금: corr=0.7237
+
+--- source / sample_weight 확인 ---
+source      sample_weight
+simulation  1.0              240000
+
+저장 완료: C:\Users\kj77k\Downloads\min_project\data\processed\simulation_long.csv

@@ -1,0 +1,17 @@
+월세대출                    ml_enabled=False  count=14
+전세자금대출                  ml_enabled=True   count=563
+구입자금대출                  ml_enabled=False  count=0
+공공임대                    ml_enabled=True   count=385
+공공분양                    ml_enabled=False  count=0
+민간분양특별공급                ml_enabled=False  count=0
+주거급여임차                  ml_enabled=True   count=59
+주거급여수선                  ml_enabled=False  count=0
+개보수                     ml_enabled=False  count=3
+생계급여                    ml_enabled=True   count=1095
+의료급여                    ml_enabled=True   count=1066
+교육급여                    ml_enabled=True   count=157
+공적연금                    ml_enabled=True   count=3566
+고용보험                    ml_enabled=True   count=316
+산재보험                    ml_enabled=False  count=42
+자활근로                    ml_enabled=False  count=26
+주거급여                    ml_enabled=True   count=1390

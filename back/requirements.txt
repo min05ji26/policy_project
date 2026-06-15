@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+pydantic
+joblib
+numpy
+pandas
+scikit-learn==1.7.1
+requests
+python-dotenv
+pyreadstat

@@ -1,0 +1,104 @@
+/* ===== NAVBAR ===== */
+.navbar {
+  background: #F5F5F5;
+  border-bottom: 0.3px solid #1D1D1D;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.nav-logo {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  color: #171C22;
+  text-decoration: none;
+}
+
+.nav-icon-placeholder {
+  width: 57px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #999;
+  border: 1px dashed #ccc;
+  border-radius: 4px;
+  background: #eee;
+  flex-shrink: 0;
+}
+
+/* 태극기 이미지 사용 시: src/assets/taegeukgi.png */
+
+.nav-right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.nav-btn {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 8px 20px;
+  border: 1px solid #171C22;
+  border-radius: 18px;
+  color: #171C22;
+  background: #F5F5F5;
+  cursor: pointer;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+
+.nav-btn:hover {
+  background: #e8e8e8;
+}
+
+.nav-btn-primary {
+  background: #171C22;
+  color: #F5F5F5;
+}
+
+.nav-btn-primary:hover {
+  background: #2d3748;
+}
+
+/* 로그인/회원가입 합쳐진 버튼 (비로그인 상태) */
+.nav-btn-login {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  padding: 10px 26px;
+  border: 1px solid #171C22;
+  border-radius: 18px;
+  color: #171C22;
+  background: #F5F5F5;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.nav-btn-login:hover {
+  background: #e8e8e8;
+}
+
+@media (max-width: 768px) {
+  .navbar { padding: 0 20px; height: 64px; }
+  .nav-logo { font-size: 20px; }
+  .nav-btn-login { font-size: 16px; padding: 8px 16px; }
+  .nav-icon-placeholder { width: 40px; height: 42px; }
+}

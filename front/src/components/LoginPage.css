@@ -1,0 +1,173 @@
+/* ===== LOGIN PAGE ===== */
+.login-wrap {
+  min-height: 100vh;
+  background: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+  padding: 40px 20px;
+  background: #F5F5F5;
+}
+
+.login-card {
+  background: #FFFFFF;
+  border: 0.3px solid #1D1D1D;
+  border-radius: 18px;
+  padding: 48px 44px;
+  width: 100%;
+  max-width: 440px;
+  box-sizing: border-box;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.login-logo {
+  font-weight: 600;
+  font-size: 20px;
+  color: #171C22;
+  margin-bottom: 12px;
+}
+
+.login-title {
+  font-weight: 600;
+  font-size: 28px;
+  color: #171C22;
+  margin: 0 0 8px 0;
+}
+
+.login-sub {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+/* 카카오 버튼 */
+.social-btns { margin-bottom: 20px; }
+
+.social-btn {
+  width: 100%;
+  height: 52px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: filter 0.15s;
+}
+
+.social-btn.kakao {
+  background: #FEE500;
+  color: #3C1E1E;
+}
+
+.social-btn.kakao:hover { filter: brightness(0.93); }
+
+/* 구분선 */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+  color: #999;
+  font-size: 13px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 0.3px;
+  background: #1D1D1D;
+  opacity: 0.3;
+}
+
+/* 폼 */
+.login-form { display: flex; flex-direction: column; gap: 16px; }
+
+.field { display: flex; flex-direction: column; gap: 6px; }
+
+.field label {
+  font-weight: 500;
+  font-size: 14px;
+  color: #171C22;
+}
+
+.field input {
+  height: 48px;
+  border: 0.3px solid #1D1D1D;
+  border-radius: 12px;
+  padding: 0 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #171C22;
+  background: #F5F5F5;
+  outline: none;
+  transition: border-color 0.15s;
+  box-sizing: border-box;
+}
+
+.field input:focus {
+  border-color: #47E3D5;
+  background: #fff;
+}
+
+.field input::placeholder { color: #aaa; }
+
+.error-msg {
+  font-size: 13px;
+  color: #e53e3e;
+  margin: 0;
+}
+
+/* 로그인 버튼 — #47E3D5 포인트 */
+.login-btn {
+  width: 100%;
+  height: 52px;
+  background: #47E3D5;
+  color: #171C22;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: filter 0.15s;
+}
+
+.login-btn:hover { filter: brightness(0.92); }
+
+.login-footer {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.go-signup {
+  background: none;
+  border: none;
+  color: #171C22;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
